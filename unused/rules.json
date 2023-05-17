@@ -1,0 +1,82 @@
+{
+    "(?i)\\bmd5\\b": [
+      "High",
+      "Use of insecure hash function. Use a stronger hashing algorithm such as SHA-256.",
+      12
+    ],
+    "(?i)\\bsha1\\b": [
+      "High",
+      "Use of insecure hash function. Use a stronger hashing algorithm such as SHA-256.",
+      12
+    ],
+    "(?i)\\brc4\\b": [
+      "High",
+      "Use of insecure encryption algorithm. Use a stronger encryption algorithm such as AES-256.",
+      13
+    ],
+    "(?i)\\bdes\\b": [
+      "Medium",
+      "Use of weak encryption algorithm. Use a stronger encryption algorithm such as AES-256.",
+      15
+    ],
+    "(?i)\\brc2\\b": [
+      "Medium",
+      "Use of weak encryption algorithm. Use a stronger encryption algorithm such as AES-256.",
+      15
+    ],
+    "(?i)\\bplaintext\\b": [
+      "High",
+      "Use of plaintext data transmission. Encrypt data in transit using SSL/TLS.",
+      16
+    ],
+    "(?i)\\bftp\\b": [
+      "High",
+      "Use of insecure network protocol. Use a more secure protocol such as SFTP or FTPS.",
+      17
+    ],
+    "(?i)\\btelnet\\b": [
+      "High",
+      "Use of insecure network protocol. Use a more secure protocol such as SSH.",
+      18
+    ],
+    "(?i)\\brlogin\\b": [
+      "High",
+      "Use of insecure network protocol. Use a more secure protocol such as SSH.",
+      18
+    ],
+    "(?i)\\brsh\\b": [
+      "High",
+      "Use of insecure network protocol. Use a more secure protocol such as SSH.",
+      18
+    ],
+    "(?i)\\btftp\\b": [
+      "High",
+      "Use of insecure network protocol. Use a more secure protocol such as SFTP or FTPS.",
+      19
+    ],
+    "(?i)\\bsendmail\\b": [
+      "Medium",
+      "Sendmail is a legacy email server that is no longer maintained and may have security vulnerabilities. Use a more modern email server such as Postfix or Exim.",
+      20
+    ],
+    "(?i)\\bsmtp\\b": [
+      "Medium",
+      "SMTP is an insecure email protocol that sends emails in plain text. Use a more secure protocol such as SMTPS or STARTTLS.",
+      21
+    ],
+    "(?i)\\bpassword\\b[^,]*[,{]((?!private_key).)*$": [
+      "High",
+      "SSH connection should use private key instead of password.",
+      22
+    ],
+    "(?i)\\bpassword\\b[^,]*[,{].*\\bssh\\b[^,]*[,}]": [
+      "High",
+      "SSH connection should use private key instead of password.",
+      22
+    ],
+    "(?i)\\bpassword\\b[^,]*[,{].*\\bwinrm\\b[^,]*[,}]": [
+      "High",
+      "WinRM connection should use HTTPS protocol and client certificate authentication.",
+      23
+    ]
+}

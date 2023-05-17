@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IaC Security Scanner Results</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.css" integrity="sha512-v5gLZQ0vSl9E7Lqlx2r2mkS7V+76CGbbtbdwSdMnBn2mF8oNML4BC+4VJ7d3gX6CC0d0P4C9VZiJWyN/TS7ig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="container">
+<h1 class="mt-5">IaC Security Scanner Results</h1>
+<table id="results-table" class="table">
+<thead>
+<tr>
+<th scope="col">Issue</th>
+<th scope="col">Severity</th>
+<th scope="col">Line Number</th>
+<th scope="col">Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weak password detected</td>
+<td>High</td>
+<td>1</td>
+<td>Use a strong and complex password or passphrase.</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>3</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Potentially unencrypted or una</td>
+<td>High</td>
+<td>5</td>
+<td>Ensure that all network protocols are encrypted and authenticated</td>
+</tr>
+<tr>
+<td>Script file not found</td>
+<td>High</td>
+<td>6</td>
+<td>Ensure that the script file exists and the path is correct</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>6</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Insecure services detected in </td>
+<td>High</td>
+<td>6</td>
+<td>Use secure protocols (e.g. HTTPS) to connect to services instead of insecure protocols (e.g. HTTP)</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>10</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>11</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Found weak secret</td>
+<td>High</td>
+<td>15</td>
+<td>Store secrets in a secure and encrypted location (e.g. AWS Secrets Manager), and use appropriate access controls to protect them.</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>15</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>23</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Found weak secret</td>
+<td>High</td>
+<td>26</td>
+<td>Store secrets in a secure and encrypted location (e.g. AWS Secrets Manager), and use appropriate access controls to protect them.</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>30</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>32</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Found weak secret</td>
+<td>High</td>
+<td>37</td>
+<td>Store secrets in a secure and encrypted location (e.g. AWS Secrets Manager), and use appropriate access controls to protect them.</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>38</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Found weak secret</td>
+<td>High</td>
+<td>38</td>
+<td>Store secrets in a secure and encrypted location (e.g. AWS Secrets Manager), and use appropriate access controls to protect them.</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>44</td>
+<td>Use of insecure command execution</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>48</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>48</td>
+<td>Use of insecure encryption algorithm</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>49</td>
+<td>Use of insecure network protocol</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>49</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>50</td>
+<td>Use of insecure network protocol</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>50</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>51</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>51</td>
+<td>Use of insecure network protocol</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>52</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>52</td>
+<td>Use of insecure network protocol</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>53</td>
+<td>Use of insecure network protocol</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>53</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>54</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>55</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>Medium</td>
+<td>54</td>
+<td>Use of insecure email server</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>Medium</td>
+<td>55</td>
+<td>Use of insecure email server</td>
+</tr>
+</tbody>
+</table>
+<h2 class="mt-5">Code Editor</h2>
+<textarea id="code" name="code" style="min-height: 400px; min-width: 800px;"><script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/codemirror.min.js" integrity="sha512-Gp+8MJvDl2G5Qq/0S3mXg4bxBCj8gP5TAdlxM+/tdE+4HHl1H1QesuT0ZUxJxj3Z/aP5i0rsfK3cVr+bojuzdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.2/mode/terraform/terraform.min.js" integrity="sha512-kS3o1ce3aj6U1izxqVKRg0sfgjy1hHfGXe7/sR3Hq6f0B0Uh+kT0ffu63OyEPx9GzQlYzr9N0gijmGufMe5cTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+mode: "terraform",
+lineNumbers: true,
+readOnly: true
+});
+</script>
+<table id="results-table" class="table">
+<thead>
+<tr>
+<th scope="col">Issue</th>
+<th scope="col">Severity</th>
+<th scope="col">Line Number</th>
+<th scope="col">Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weak password detected</td>
+<td>High</td>
+<td>1</td>
+<td>Use a strong and complex password or passphrase.</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>3</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Potentially unencrypted or una</td>
+<td>High</td>
+<td>5</td>
+<td>Ensure that all network protocols are encrypted and authenticated</td>
+</tr>
+<tr>
+<td>Script file not found</td>
+<td>High</td>
+<td>6</td>
+<td>Ensure that the script file exists and the path is correct</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>6</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Insecure services detected in </td>
+<td>High</td>
+<td>6</td>
+<td>Use secure protocols (e.g. HTTPS) to connect to services instead of insecure protocols (e.g. HTTP)</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>10</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>11</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Found weak secret</td>
+<td>High</td>
+<td>15</td>
+<td>Store secrets in a secure and encrypted location (e.g. AWS Secrets Manager), and use appropriate access controls to protect them.</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>15</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>23</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Found weak secret</td>
+<td>High</td>
+<td>26</td>
+<td>Store secrets in a secure and encrypted location (e.g. AWS Secrets Manager), and use appropriate access controls to protect them.</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>30</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>32</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Found weak secret</td>
+<td>High</td>
+<td>37</td>
+<td>Store secrets in a secure and encrypted location (e.g. AWS Secrets Manager), and use appropriate access controls to protect them.</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>38</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Found weak secret</td>
+<td>High</td>
+<td>38</td>
+<td>Store secrets in a secure and encrypted location (e.g. AWS Secrets Manager), and use appropriate access controls to protect them.</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>44</td>
+<td>Use of insecure command execution</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>48</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>48</td>
+<td>Use of insecure encryption algorithm</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>49</td>
+<td>Use of insecure network protocol</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>49</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>50</td>
+<td>Use of insecure network protocol</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>50</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>51</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>51</td>
+<td>Use of insecure network protocol</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>52</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>52</td>
+<td>Use of insecure network protocol</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>High</td>
+<td>53</td>
+<td>Use of insecure network protocol</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>53</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>54</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Hard-coded IPs or domains</td>
+<td>High</td>
+<td>55</td>
+<td>aws_security_group_rule.allow_all cidr_blocks = allow only specific IP</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>Medium</td>
+<td>54</td>
+<td>Use of insecure email server</td>
+</tr>
+<tr>
+<td>Config issue found</td>
+<td>Medium</td>
+<td>55</td>
+<td>Use of insecure email server</td>
+</tr>
+</tbody>
+</table>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script>
+$(document).ready(function() {
+$("#results-table").DataTable();
+});

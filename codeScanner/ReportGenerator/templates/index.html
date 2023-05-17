@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IaC Security Scanner - Terraform Files</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Include any additional CSS files or stylesheets -->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">IaC Security Scanner</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="mt-5">IaC Security Scanner: Terraform Files</h1>
+        <table id="results-table" class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">File Name</th>
+                    <th scope="col">Report</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tf_file in reports %}
+                    <tr>
+                        <td>{{ tf_file }}</td>
+                        <td><a href="{{ url_for('static', filename='reports/' + tf_file) }}">View Report</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Include any additional JavaScript files or scripts -->
+</body>
+</html>
