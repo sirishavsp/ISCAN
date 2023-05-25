@@ -9,7 +9,7 @@ import requests
 import json
 
 def main():
-    directory = "Test/Testfiles"
+    directory = "Test/Tests"
 
     # Check if the specified path is a directory
     if not os.path.isdir(directory):
