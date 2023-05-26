@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template, send_from_directory
 import os
-from report import generate_report, report_blueprint
+from .report import generate_report, report_blueprint
 
 app = Flask(__name__)
 app.register_blueprint(report_blueprint)  # Register the report blueprint
